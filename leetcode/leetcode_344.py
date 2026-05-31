@@ -1,12 +1,9 @@
 class Solution:
     def reverseString(self, s: List[str]) -> None:
-        left = 0
-        right = len(s) - 1
+        i = 0
+        j = len(s) - 1
+        while i<j:
+            s[i],s[j] = s[j],s[i]
+            i += 1
+            j -= 1
         
-        while left < right:
-            temp = s[left]
-            s[left] = s[right]
-            s[right] = temp
-            
-            left += 1
-            right -= 1
